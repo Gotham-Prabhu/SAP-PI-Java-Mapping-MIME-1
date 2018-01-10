@@ -1,0 +1,10 @@
+Order Number,Order Date,Status,Subtotal Incl. Tax,Requested Service,Shipping Cost,Custom 1,Custom 2,Custom 3,Item Name,Item SKU,Item Unit Price,Item Quantity,Item Unit Weight (oz),Warehouse/Bin Location,Full Name,First Name,Last Name,Address Line 1,Address Line 2,City,State/Province,Zip/Postal Code,Country,Company,Email,Phone,Notes
+1616,11/1/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Patricia Field,,,609 Castle Ridge Rd,Suite 445,Austin,TX,78746,United States,Patty Jams,patty@pattyjams.com,9796665555,Needs the order by 11/3/2017
+1615,11/2/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Fernando Paulo,,,3801 Wilson,,Austin,TX,78704,United States,,paulof@gmail.com,5647775533,
+1614,11/2/2017,unfulfilled,87.1,Express,22.3,,,,iPhone 4S cover. Blue,I098a,39.8,1,4,M2 S1,Gerry Johns,,,600 California,,San Francisco,CA,94108,United States,,Gerry@example.com,8752223335,
+1617,11/1/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Patricia Field,,,609 Castle Ridge Rd,Suite 445,Austin,TX,78746,United States,Patty Jams,patty@pattyjams.com,9796665555,Needs the order by 11/3/2017
+1612,11/2/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Fernando Paulo,,,3801 Wilson,,Austin,TX,78704,United States,,paulof@gmail.com,5647775533,
+1618,11/2/2017,unfulfilled,87.1,Express,22.3,,,,iPhone 4S cover. Blue,I098a,39.8,1,4,M2 S1,Gerry Johns,,,600 California,,San Francisco,CA,94108,United States,,Gerry@example.com,8752223335,
+1619,11/1/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Patricia Field,,,609 Castle Ridge Rd,Suite 445,Austin,TX,78746,United States,Patty Jams,patty@pattyjams.com,9796665555,Needs the order by 11/3/2017
+1620,11/2/2017,pending,25,First Class,0,,,,Computer Mouse,C345,25,1,3,B2 S3,Fernando Paulo,,,3801 Wilson,,Austin,TX,78704,United States,,paulof@gmail.com,5647775533,
+1621,11/2/2017,unfulfilled,87.1,Express,22.3,,,,iPhone 4S cover. Blue,I098a,39.8,1,4,M2 S1,Gerry Johns,,,600 California,,San Francisco,CA,94108,United States,,Gerry@example.com,8752223335,

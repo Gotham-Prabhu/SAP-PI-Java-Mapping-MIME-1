@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_152_x86"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/eclipse-jee-oxygen-2-win32-x86_64/eclipse/Mapping Jar Files 7.31/com.sap.xi.mapping.tool.lib_api.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse-jee-oxygen-2-win32-x86_64/eclipse/Mapping Jar Files 7.31/com.sap.xpi.ib.mapping.cl.lib.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse-jee-oxygen-2-win32-x86_64/eclipse/Mapping Jar Files 7.31/com.sap.xpi.ib.mapping.lib.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
