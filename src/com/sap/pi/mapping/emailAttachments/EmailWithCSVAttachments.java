@@ -35,11 +35,11 @@ import com.sap.aii.mapping.api.TransformationOutput;
 // import java.util.Base64;
 
 public class EmailWithCSVAttachments extends AbstractTransformation {
-	
+
 	StringBuilder emailBuilder = new StringBuilder();
 	String CRLF = "\r\n";
-	String boundaryMixed = "001a114bc6f2d60884056265dfdc";
-	String contentTypeMixed = "multipart/mixed; boundary=\"" + boundaryMixed + "\"";
+	String boundary = "001a114bc6f2d60884056265dfdc";
+	String contentType = "multipart/mixed; boundary=\"" + boundary + "\"";
 	String mailContent = "Dear User," + CRLF + "PFA the required CSV files for the user" + CRLF + CRLF + CRLF
 			+ "Regards," + CRLF + "SAP PI team";
 
@@ -57,7 +57,7 @@ public class EmailWithCSVAttachments extends AbstractTransformation {
 		InputStream inputStream = arg0.getInputPayload().getInputStream();
 		OutputStream outputStream = arg1.getOutputPayload().getOutputStream();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		
+
 		getTrace().addInfo("parsing inputstream and extracting base64 Encoded csv files");
 		try {
 
@@ -72,13 +72,13 @@ public class EmailWithCSVAttachments extends AbstractTransformation {
 							uploadElement.getElementsByTagName("Base64EncodedContent").item(0).getTextContent());
 				}
 			}
-			
+
 			getTrace().addInfo("creating the MIME body for the mail");
 			createMIMEBody();
 
 			getTrace().addInfo("wrting the MIME mail body to the outputstream");
 			outputStream.write(emailBuilder.toString().getBytes());
-			arg1.getOutputHeader().setContentType(contentTypeMixed);
+			arg1.getOutputHeader().setContentType(contentType);
 
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
@@ -91,13 +91,13 @@ public class EmailWithCSVAttachments extends AbstractTransformation {
 	}
 
 	public StringBuilder createMIMEBody() {
-		emailBuilder.append("ContentType: multipart/mixed; boundary=\"" + boundaryMixed + "\"" + CRLF + CRLF);
-		emailBuilder.append("--" + boundaryMixed + CRLF + "Content-Type: text/plain; charset=UTF-8" + CRLF
+		emailBuilder.append("ContentType: multipart/mixed; boundary=\"" + boundary + "\"" + CRLF + CRLF);
+		emailBuilder.append("--" + boundary + CRLF + "Content-Type: text/plain; charset=UTF-8" + CRLF
 				+ "Content-Disposition: inline" + CRLF + CRLF + mailContent + CRLF + CRLF);
 
 		for (int fileCount = 0; fileCount < encodedFiles.size(); fileCount++) {
 
-			emailBuilder.append("--" + contentTypeMixed + CRLF + "Content-Type: text/csv; name=\""
+			emailBuilder.append("--" + contentType + CRLF + "Content-Type: text/csv; name=\""
 					+ encodedFiles.keySet().toArray()[fileCount] + "\"" + CRLF
 					+ "Content-Disposition: attachment; filename=\"" + encodedFiles.keySet().toArray()[fileCount] + "\""
 					+ CRLF + "Content-Transfer-Encoding: base64" + CRLF);
@@ -105,7 +105,7 @@ public class EmailWithCSVAttachments extends AbstractTransformation {
 			emailBuilder.append(encodedFiles.get(encodedFiles.keySet().toArray()[fileCount]) + CRLF + CRLF);
 		}
 
-		emailBuilder.append("--" + contentTypeMixed + "--" + CRLF);
+		emailBuilder.append("--" + contentType + "--" + CRLF);
 
 		return emailBuilder;
 	}

@@ -1,4 +1,4 @@
-# SAP PI Java Mapping  - Email with csv attachments
+# Create Email-MIME body with base64 encoded csv attachments
 
     ECC -> PI -> Email to client
 
